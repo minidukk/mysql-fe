@@ -41,8 +41,8 @@ const UserCongTac = () => {
       {congTac ? (
         <>
           <Typography>Mã Nhân Viên: {congTac.NV_Ma}</Typography>
-          <Typography>Phòng Ban: {congTac.PB_Ma}</Typography>
-          <Typography>Chức Vụ: {congTac.CV_Ma}</Typography>
+          <Typography>Phòng Ban: {congTac.PB_TenPhongBan}</Typography>
+          <Typography>Chức Vụ: {congTac.CV_TenCV}</Typography>
           <Typography>Ngày Bắt Đầu: {new Date(congTac.CT_BatDau).toLocaleDateString()}</Typography>
           <Typography>Ngày Kết Thúc: {congTac.CT_KetThuc ? new Date(congTac.CT_KetThuc).toLocaleDateString() : 'Chưa xác định'}</Typography>
         </>

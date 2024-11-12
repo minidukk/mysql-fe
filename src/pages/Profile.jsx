@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Box, Button, Card, CardContent, Typography, Grid2 } from '@mui/material';
 import UserCongTac from '../components/UserCongTac';
-import UserLuong from '../components/UserLuong';
+import UserDMLuong from '../components/UserDMLuong';
 import DanhSachNghiPhep from '../components/NghiPhepList';
 
 function Profile() {
@@ -32,7 +32,7 @@ function Profile() {
                         </Grid2>
                         
                         <Grid2 item xs={12} sm={6}>
-                            <UserLuong />
+                            <UserDMLuong />
                         </Grid2>
                         
                         
