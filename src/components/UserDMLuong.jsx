@@ -35,7 +35,7 @@ const UserDMLuong = () => {
 
   return (
     <Paper sx={{ padding: 3, marginTop: 2 }}>
-      <Typography variant="h5" sx={{ marginBottom: 2 }}>
+      <Typography variant="h6" sx={{ marginBottom: 2 }}>
         Thông Tin Lương Của Bạn
       </Typography>
       {luong ? (

@@ -35,7 +35,7 @@ const UserCongTac = () => {
 
   return (
     <Paper sx={{ padding: 3, marginTop: 2 }}>
-      <Typography variant="h5" sx={{ marginBottom: 2 }}>
+      <Typography variant="h6" sx={{ marginBottom: 2 }}>
         Thông Tin Công Tác Của Bạn
       </Typography>
       {congTac ? (

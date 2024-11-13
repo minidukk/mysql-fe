@@ -7,7 +7,7 @@ function Header() {
     const { user, logout } = useAuth();
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{ backgroundColor: '#3f51b5' }}>
             <Toolbar>
                 <Typography variant="h6" sx={{ flexGrow: 0.02 }}>
                     Trang Web Nhân Viên
@@ -21,9 +21,10 @@ function Header() {
                         Công tác
                     </Button>
                     <Button color="inherit" component={Link} to="/nghiphep" sx={{ marginRight: 2 }}>
-                        Nghỉ phép
+                        Nộp đơn Nghỉ phép
                     </Button>
                 </Typography>
+                
                 {!user ? (
                     <Button color="inherit" component={Link} to="/login">
                         Đăng nhập

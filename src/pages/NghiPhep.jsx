@@ -51,7 +51,7 @@ function NghiPhep() {
               variant="outlined"
               fullWidth
               margin="normal"
-              value={user.NV_Ma} // Automatically fills with user's NV_Ma
+              value={user.NV_Ma} 
               InputProps={{
                 readOnly: true,
               }}

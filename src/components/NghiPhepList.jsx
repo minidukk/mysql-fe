@@ -4,7 +4,7 @@ import { Box, Card, CardContent, Typography, Table, TableBody, TableCell, TableH
 import axios from 'axios';
 
 function DanhSachNghiPhep() {
-  const { user } = useAuth(); // Get user info from AuthContext
+  const { user } = useAuth(); 
   const [nghiPhepList, setNghiPhepList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,7 +16,6 @@ function DanhSachNghiPhep() {
       return;
     }
 
-    // Fetch leave requests when the component mounts
     const fetchNghiPhepData = async () => {
       try {
         const response = await axios.get(`http://localhost:3030/api/nghiphep/${user.NV_Ma}`, {
@@ -25,14 +24,13 @@ function DanhSachNghiPhep() {
           },
         });
         
-        // Sort the leave data by NN_NgayNghi in descending order
         const sortedData = response.data.sort((a, b) => {
           const dateA = new Date(a.NN_NgayNghi);
           const dateB = new Date(b.NN_NgayNghi);
-          return dateB - dateA; // Sort in descending order
+          return dateB - dateA; 
         });
 
-        setNghiPhepList(sortedData);  // Set the sorted data
+        setNghiPhepList(sortedData);  
       } catch (error) {
         setError('Có lỗi xảy ra khi tải dữ liệu.');
       } finally {
@@ -55,9 +53,9 @@ function DanhSachNghiPhep() {
     <Box display="flex" justifyContent="center" alignItems="center" sx={{ marginTop: 2 }}>
       <Card sx={{ maxWidth: 800, width: '100%', padding: 2 }}>
         <CardContent>
-          <Typography variant="h6" align="center" gutterBottom>
+          {/* <Typography variant="h6" align="center" gutterBottom>
             Yêu Cầu Nghỉ Phép
-          </Typography>
+          </Typography> */}
           {nghiPhepList.length === 0 ? (
             <Typography variant="h6" align="center">Không có dữ liệu nghỉ phép.</Typography>
           ) : (
